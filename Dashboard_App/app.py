@@ -52,7 +52,7 @@ with tab2:
     st.image(image6, caption='Weekday versue Weekend sales')
 
 with tab3:
-    st.markdown("Few insights that might help you run your business more efficiently")
+    st.markdown("Few insights that might help you run your business more efficiently: ")
     st.write("#")
     st.markdown("- Coffee is always the best selling product and followed by Bread and Tea in every month.")
     st.write("#")
