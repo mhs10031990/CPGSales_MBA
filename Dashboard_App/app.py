@@ -9,7 +9,7 @@ st.write("This analysis is based on The Bread Basket a bakery located in Edinbur
 with st.sidebar:
     from PIL import Image
     image = Image.open('refract.png')
-    df1 =  pd.DataFrame({"Analysis Start Date":" October, 2011", "Analysis End Date" : "April, 2012"})
+    df1 =  pd.DataFrame({"Analysis Start Date":{0:" October, 2011"}, "Analysis End Date" : {0:"April, 2012"}})
     st.table(df1)
     st.write("The dataset has transactions of customers who have ordered different items from this bakery online during the above mentioned timeline")
     st.write("#")
