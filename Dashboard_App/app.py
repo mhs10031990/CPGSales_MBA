@@ -52,16 +52,19 @@ with tab2:
     st.image(image6, caption='Weekday versue Weekend sales')
 
 with tab3:
-    st.header("Few insights that might help you run your business more efficiently")
-    st.subheader("Coffee is always the best selling product and followed by Bread and Tea in every month.")
-
+    st.markdown("Few insights that might help you run your business more efficiently")
     st.write("#")
-    st.subheader("The most transactions is at 10 a.m — 12 p.m, with a peak at 11 a.m.") 
-
+    st.markdown("- Coffee is always the best selling product and followed by Bread and Tea in every month.")
     st.write("#")
-    st.subheader("Saturday is the day of the most transactions, followed by Friday and Sunday.") 
-
+    st.markdown("- The most transactions is at 10 a.m — 12 p.m, with a peak at 11 a.m.") 
     st.write("#")
-    st.subheader("Transactions during the most crowded sales occurred in November") 
+    st.markdown("- Saturday is the day of the most transactions, followed by Friday and Sunday.") 
+    st.write("#")
+    st.markdown("- Transactions during the most crowded sales occurred in November") 
+    
+    st.markdown('''<style>
+    [data-testid="stMarkdownContainer"] ul{padding-left:40px;}
+    </style>
+    ''', unsafe_allow_html=True)
 
 
