@@ -57,12 +57,17 @@ with tab2:
     st.image(image6, caption='Weekday versue Weekend sales')
 
 with tab3:
-    st.markdown("Few insights that might help you run your business more efficiently: ")
+    st.markdown("Business or sales insights: ")
     st.markdown("- Coffee is always the best selling product and followed by Bread and Tea in every month.")
     st.markdown("- The most transactions is at 10 a.m — 12 p.m, with a peak at 11 a.m.") 
     st.markdown("- Saturday is the day of the most transactions, followed by Friday and Sunday.") 
     st.markdown("- Transactions during the most crowded sales occurred in November") 
     
+    st.write("#")
+    st.markdown("Business strategy to improve sales: ")
+    st.markdown("- Combo offer on items can entice customers to buy other items along with best selling product or the other way round.")
+    st.markdown("- Arranging placements of items close to coffee ordering counter can be a good strategy to tempt customers into buying them.") 
+    st.markdown("- Run promotional discount campaign during non peak hours of the weekdays might boost sales further")  
     st.markdown('''<style>
     [data-testid="stMarkdownContainer"] ul{padding-left:40px;}
     </style>
