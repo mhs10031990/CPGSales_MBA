@@ -13,8 +13,8 @@ with st.sidebar:
     st.subheader("Store -> The Bread Basket bakery, Edinburgh (Scotland)")
     st.write("#")
     st.write("Dataset Summary:")
-    st.write("The dataset has transactions of customers who have ordered different items from this bakery online during the above mentioned timeline")
-    st.write("#")
+    st.write("The dataset has transactions of customers who have ordered different items online during the mentioned timeline")
+    st.write("#").
     df1 =  pd.DataFrame({"Analysis Start Date":{0:" October, 2011"}, "Analysis End Date" : {0:"April, 2012"}})
     st.table(df1)
     st.write("#")
@@ -63,9 +63,7 @@ with tab2:
 
 with tab3:
     st.markdown("Few insights that might help you run your business more efficiently: ")
-    st.write("#")
     st.markdown("- Coffee is always the best selling product and followed by Bread and Tea in every month.")
-    
     st.markdown("- The most transactions is at 10 a.m — 12 p.m, with a peak at 11 a.m.") 
     st.markdown("- Saturday is the day of the most transactions, followed by Friday and Sunday.") 
     st.markdown("- Transactions during the most crowded sales occurred in November") 
