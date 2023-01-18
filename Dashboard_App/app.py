@@ -14,7 +14,7 @@ with st.sidebar:
     st.write("Dataset Summary:")
     st.write("The dataset has transactions of customers who have ordered different items from this bakery online during the above mentioned timeline")
     st.write("#")
-    st.write("Applicable Tags")
+    st.write("Applicable Tags:")
     st.write("Retail, Shopping, Business, Investing")
     st.write("#")
     st.write("#")
