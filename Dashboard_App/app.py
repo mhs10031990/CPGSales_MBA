@@ -18,7 +18,13 @@ with st.sidebar:
     st.write("#")
     st.write("#")
     st.write("#")
-    st.write("This app Powered by Refract and Streamlit")
+    st.write("#")
+    st.write("#")
+    st.write("#")
+    st.write("#")
+    st.write("#")
+    st.write("#")
+    st.write("This app is powered by Refract and Streamlit")
 
 tab1, tab2, tab3 = st.tabs(["Data Profile", "Visualization", "Insights"])
 with tab1:
