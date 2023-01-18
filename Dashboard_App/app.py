@@ -4,7 +4,7 @@ import pandas as pd
 
 st.set_page_config(page_title="Refract",layout="wide", page_icon="")
 st.header("Market Basket Analysis")
-st.write("This analysis is based on "The Bread Basket" a bakery located in Edinburgh")
+st.write("This analysis is based on The Bread Basket a bakery located in Edinburgh")
 
 with st.sidebar:
     from PIL import Image
