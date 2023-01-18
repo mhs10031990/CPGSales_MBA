@@ -25,7 +25,7 @@ with tab1:
     components.html(source_code, height = 600, scrolling=True)
     
 with tab2:
-    imagea = Image.open('items_sold_per_hour.jpeg')
+    imagea = Image.open('most_popular_items.jpeg')
     image0 = Image.open('Relative_vs_Absolute_Sales_per_item.jpeg')
     image1 = Image.open('items_sold_basis_daily.JPG')
     image2 = Image.open('items_sold_basis_daytime.JPG')
