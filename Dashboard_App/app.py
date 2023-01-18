@@ -71,5 +71,3 @@ with tab3:
     [data-testid="stMarkdownContainer"] ul{padding-left:40px;}
     </style>
     ''', unsafe_allow_html=True)
-
-
