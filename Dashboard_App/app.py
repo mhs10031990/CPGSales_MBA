@@ -66,8 +66,9 @@ with tab3:
     st.write("#")
     st.markdown("Business strategy to improve sales: ")
     st.markdown("- Combo offer on items can entice customers to buy other items along with best selling product or the other way round.")
-    st.markdown("- Arranging placements of items close to coffee ordering counter can be a good strategy to tempt customers into buying them.") 
-    st.markdown("- Run promotional discount campaign during non peak hours of the weekdays might boost sales further")  
+    st.markdown("- Arranging placements of items close to best selling product at ordering counter can be a good strategy to tempt customers into buying them.") 
+    st.markdown("- Running promotional discount campaign during non peak hours of the weekdays might boost sales further")  
+    st.markdown("- Run subscription based campaign to attract customer memberships for retention")  
     st.markdown('''<style>
     [data-testid="stMarkdownContainer"] ul{padding-left:40px;}
     </style>
