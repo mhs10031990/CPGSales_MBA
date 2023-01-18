@@ -28,7 +28,7 @@ summary(x)
 glimpse(x)
 
 #item Frequency
-jpeg(file="most_popular_items.jpeg")
+jpeg(file="/data/R/most_popular_items.jpeg")
 x1 <- x %>% 
   group_by(Item) %>% 
   summarise(Count = n()) %>% 
@@ -43,7 +43,7 @@ x1
 dev.off()
 
 # Line items sold per day
-jpeg(file="Line_items_sold_per_day.jpeg")
+jpeg(file="/data/R/Line_items_sold_per_day.jpeg")
 x2 <- x %>% 
   group_by(Date) %>% 
   summarise(Count= n()) %>% 
@@ -58,7 +58,7 @@ dev.off()
 
 
 # Total line items sold per weekday
-jpeg(file="Line_items_sold_per_weekday.jpeg")
+jpeg(file="/data/R/Line_items_sold_per_weekday.jpeg")
 x3 <- x %>% 
   mutate(Day = wday(Date,label=T)) %>% 
   group_by(Day) %>% 
@@ -73,7 +73,7 @@ dev.off()
 
 
 # Total unique transactions per weekday
-jpeg(file="Unique_transactions_per_weekday.jpeg")
+jpeg(file="/data/R/Unique_transactions_per_weekday.jpeg")
 x4 <- x %>% 
   mutate(wday=wday(Date,label=T)) %>% 
   group_by(wday,Transaction) %>% 
@@ -88,7 +88,7 @@ x4
 dev.off()
 
 # Line items sold per Hour
-jpeg(file="items_sold_per_hour.jpeg")
+jpeg(file="/data/R/items_sold_per_hour.jpeg")
 x7 <- x %>%
   mutate(Hour = as.factor(hour(x$Time))) %>% 
   group_by(Hour) %>% 
@@ -102,7 +102,7 @@ x7
 dev.off()
 
 #visualize transaction density person per hour
-jpeg(file="transaction_density_per_hour.jpeg")
+jpeg(file="/data/R/transaction_density_per_hour.jpeg")
 x10 <- x %>% 
   mutate(Hour=as.factor(hour(Time)),
          Day=wday(Date,label=T)) %>% 
@@ -126,7 +126,7 @@ y <- read.transactions("/data/BreadBasket_DMS.csv",
 summary(y)
 
 
-jpeg("Relative_vs_Absolute_Sales_per_item.jpeg")
+jpeg("/data/R/Relative_vs_Absolute_Sales_per_item.jpeg")
 par(mfrow=c(1,2))
 itemFrequencyPlot(y,topN=5,type="relative")
 itemFrequencyPlot(y,topN=5,type="absolute")
