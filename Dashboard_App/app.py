@@ -34,6 +34,12 @@ with tab2:
     image5 = Image.open('items_sold_basis_month.JPG')
     image6 = Image.open('weekday_vs_weekend.JPG')
 
+    st.image(imagea, caption='Top items sold')
+    st.write("#")
+    
+    st.image(image0, caption='Relative versus Absolute item sold')
+    st.write("#")
+    
     st.image(image1, caption='Day wise item sales breakup')
     st.write("#")
 
