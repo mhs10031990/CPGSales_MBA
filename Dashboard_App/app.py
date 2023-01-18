@@ -14,7 +14,7 @@ with st.sidebar:
     st.write("#")
     st.write("Dataset Summary:")
     st.write("The dataset has transactions of customers who have ordered different items online during the mentioned timeline")
-    st.write("#").
+    st.write("#")
     df1 =  pd.DataFrame({"Analysis Start Date":{0:" October, 2011"}, "Analysis End Date" : {0:"April, 2012"}})
     st.table(df1)
     st.write("#")
