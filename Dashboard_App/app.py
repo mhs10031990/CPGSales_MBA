@@ -83,7 +83,6 @@ with tab4:
     url = 'http://svc-4a457548-1d56-4197-b287-42387d897789:5001/bakerysalesforecasting/f42e748d-fc7a-4f25-95d0-6a0f65754865/score'
     data={"payload" : "{0: 'coffee'}"}
     response_json = requests.post(url, json=data, headers=headers)
-    st.write(response_json)
     response = response_json.json()
     try:
         resp = response['upload_logging_data']['response_data']
