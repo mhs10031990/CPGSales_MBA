@@ -89,7 +89,7 @@ with tab4:
         tea_df = pd.DataFrame.from_dict(yaml.load(resp)['tea'], orient='index', columns=['Tea Sales Forecast'])
         bread_df = pd.DataFrame.from_dict(yaml.load(resp)['bread'], orient='index', columns=['Bread Sales Forecast'])
     except ValueError:
-        return response.status_code 
+        st.write(response.status_code) 
    
     #image1 = Image.open('coffee_acf_pacf.png')
     image2 = Image.open('coffee_sarimax_forecast.png')
