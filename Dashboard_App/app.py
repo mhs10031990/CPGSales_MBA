@@ -75,12 +75,12 @@ with tab3:
     ''', unsafe_allow_html=True)
     
 with tab4:
-    image1 = Image.open('/data/Charts/coffee_acf_pacf.png')
-    image2 = Image.open('/data/Charts/coffee_sarimax_forecast.png')
-    image3 = Image.open('/data/Charts/tea_acf_pacf.png')
-    image4 = Image.open('/data/Charts/tea_sarimax_forecast.png')
-    image5 = Image.open('/data/Charts/bread_acf_pacf.png')
-    image6 = Image.open('/data/Charts/bread_sarimax_forecast.png')
+    image1 = Image.open('/forecast_charts/coffee_acf_pacf.png')
+    image2 = Image.open('/forecast_charts/coffee_sarimax_forecast.png')
+    image3 = Image.open('/forecast_charts/tea_acf_pacf.png')
+    image4 = Image.open('/forecast_charts/tea_sarimax_forecast.png')
+    image5 = Image.open('/forecast_charts/bread_acf_pacf.png')
+    image6 = Image.open('/forecast_charts/bread_sarimax_forecast.png')
 
     col1, col2 = st.columns(2)
     col1.image(image1, caption='Coffee Autocorrelation and Partial Autocorrelation plot')
