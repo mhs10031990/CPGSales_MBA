@@ -3,6 +3,7 @@ import streamlit.components.v1 as components
 import pandas as pd
 import yaml
 import json
+import requests
 
 st.set_page_config(page_title="Refract",layout="wide", page_icon="")
 st.header("Market Basket Analysis")
