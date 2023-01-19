@@ -85,9 +85,9 @@ with tab4:
     response = response_json.json()
     try:
         resp = response['upload_logging_data']['response_data']
-        coffee_df = pd.DataFrame.from_dict(yaml.load(resp)['coffee'], orient='index', columns=['Coffee Sales Forecast'])
-        tea_df = pd.DataFrame.from_dict(yaml.load(resp)['tea'], orient='index', columns=['Tea Sales Forecast'])
-        bread_df = pd.DataFrame.from_dict(yaml.load(resp)['bread'], orient='index', columns=['Bread Sales Forecast'])
+        coffee_df = pd.DataFrame.from_dict(yaml.load(resp,Loader=yaml.Loader)['coffee'], orient='index', columns=['Coffee Sales Forecast'])
+        tea_df = pd.DataFrame.from_dict(yaml.load(resp,Loader=yaml.Loader)['tea'], orient='index', columns=['Tea Sales Forecast'])
+        bread_df = pd.DataFrame.from_dict(yaml.load(resp,Loader=yaml.Loader)['bread'], orient='index', columns=['Bread Sales Forecast'])
     except ValueError:
         st.write(response.status_code) 
    
