@@ -101,18 +101,21 @@ with tab4:
 
     col1, col2 = st.columns(2)
     #col1.image(image1, caption='Coffee Autocorrelation and Partial Autocorrelation plot')
+    coffee_df['Coffee Sales Forecast'] = coffee_df['Coffee Sales Forecast'].apply(np.ceil) 
     col1.table(coffee_df)
     col2.image(image2, caption='Coffee sales forecast for next 7 days')
     st.write("#")
 
     col3, col4 = st.columns(2)
     #col3.image(image3, caption='Tea Autocorrelation and Partial Autocorrelation plot')
+    tea_df['Tea Sales Forecast'] = tea_df['Tea Sales Forecast'].apply(np.ceil) 
     col3.table(tea_df)
     col4.image(image4, caption='Tea sales forecast for next 7 days')
     st.write("#")
     
     col5, col6 = st.columns(2)
     #col5.image(image5, caption='Bread Autocorrelation and Partial Autocorrelation plot')
+    bread_df['Bread Sales Forecast'] = bread_df['Bread Sales Forecast'].apply(np.ceil) 
     col5.table(bread_df)
     col6.image(image6, caption='Bread sales forecast for next 7 days')
     st.write("#")
