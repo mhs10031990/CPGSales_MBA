@@ -74,7 +74,7 @@ with tab3:
     </style>
     ''', unsafe_allow_html=True)
     
-with tab4
+with tab4:
     image1 = Image.open('/data/Charts/coffee_acf_pacf.png')
     image2 = Image.open('/data/Charts/coffee_sarimax_forecast.png')
     image3 = Image.open('/data/Charts/tea_acf_pacf.png')
@@ -93,6 +93,6 @@ with tab4
     st.write("#")
     
     col5, col6 = st.columns(2)
-    col5.image(image3, caption='Bread Autocorrelation and Partial Autocorrelation plot')
-    col6.image(image4, caption='Bread sales forecast for next 7 days')
+    col5.image(image5, caption='Bread Autocorrelation and Partial Autocorrelation plot')
+    col6.image(image6, caption='Bread sales forecast for next 7 days')
     st.write("#")
