@@ -1,6 +1,8 @@
 import streamlit as st
 import streamlit.components.v1 as components
 import pandas as pd
+import yaml
+import json
 
 st.set_page_config(page_title="Refract",layout="wide", page_icon="")
 st.header("Market Basket Analysis")
@@ -75,24 +77,41 @@ with tab3:
     ''', unsafe_allow_html=True)
     
 with tab4:
-    image1 = Image.open('coffee_acf_pacf.png')
+    headers={"Content-type":"application/json"}
+    url = 'http://svc-4a457548-1d56-4197-b287-42387d897789:5001/bakerysalesforecasting/f42e748d-fc7a-4f25-95d0-6a0f65754865/score'
+    data={"payload" : "{0: 'coffee'}"}
+    response_json = requests.post(url, json=data, headers=headers)
+    st.write(response_json)
+    response = response_json.json()
+    try:
+        resp = response['upload_logging_data']['response_data']
+        coffee_df = pd.DataFrame.from_dict(yaml.load(resp)['coffee'], orient='index', columns=['Coffee Sales Forecast'])
+        tea_df = pd.DataFrame.from_dict(yaml.load(resp)['tea'], orient='index', columns=['Tea Sales Forecast'])
+        bread_df = pd.DataFrame.from_dict(yaml.load(resp)['bread'], orient='index', columns=['Bread Sales Forecast'])
+    except ValueError:
+        return response.status_code 
+   
+    #image1 = Image.open('coffee_acf_pacf.png')
     image2 = Image.open('coffee_sarimax_forecast.png')
-    image3 = Image.open('tea_acf_pacf.png')
+    #image3 = Image.open('tea_acf_pacf.png')
     image4 = Image.open('tea_sarimax_forecast.png')
-    image5 = Image.open('bread_acf_pacf.png')
+    #image5 = Image.open('bread_acf_pacf.png')
     image6 = Image.open('bread_sarimax_forecast.png')
 
     col1, col2 = st.columns(2)
-    col1.image(image1, caption='Coffee Autocorrelation and Partial Autocorrelation plot')
+    #col1.image(image1, caption='Coffee Autocorrelation and Partial Autocorrelation plot')
+    col1.table(coffee_df)
     col2.image(image2, caption='Coffee sales forecast for next 7 days')
     st.write("#")
 
     col3, col4 = st.columns(2)
-    col3.image(image3, caption='Tea Autocorrelation and Partial Autocorrelation plot')
+    #col3.image(image3, caption='Tea Autocorrelation and Partial Autocorrelation plot')
+    col3.table(tea_df)
     col4.image(image4, caption='Tea sales forecast for next 7 days')
     st.write("#")
     
     col5, col6 = st.columns(2)
-    col5.image(image5, caption='Bread Autocorrelation and Partial Autocorrelation plot')
+    #col5.image(image5, caption='Bread Autocorrelation and Partial Autocorrelation plot')
+    col5.table(bread_df)
     col6.image(image6, caption='Bread sales forecast for next 7 days')
     st.write("#")
