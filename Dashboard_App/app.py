@@ -18,7 +18,7 @@ with st.sidebar:
     st.write("Applicable Tags:")
     st.write("Retail, Shopping, Business, Investing, Bakery, Cafe")
 
-tab1, tab2, tab3 = st.tabs(["Data Profile", "Visualization", "Insights"])
+tab1, tab2, tab3, tab4 = st.tabs(["Data Profile", "Visualization", "Insights", "Forecast"])
 with tab1:
     HtmlFile = open("data_profile.html", 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
@@ -73,3 +73,26 @@ with tab3:
     [data-testid="stMarkdownContainer"] ul{padding-left:40px;}
     </style>
     ''', unsafe_allow_html=True)
+    
+with tab4
+    image1 = Image.open('/data/Charts/coffee_acf_pacf.png')
+    image2 = Image.open('/data/Charts/coffee_sarimax_forecast.png')
+    image3 = Image.open('/data/Charts/tea_acf_pacf.png')
+    image4 = Image.open('/data/Charts/tea_sarimax_forecast.png')
+    image5 = Image.open('/data/Charts/bread_acf_pacf.png')
+    image6 = Image.open('/data/Charts/bread_sarimax_forecast.png')
+
+    col1, col2 = st.columns(2)
+    col1.image(image1, caption='Coffee Autocorrelation and Partial Autocorrelation plot')
+    col2.image(image2, caption='Coffee sales forecast for next 7 days')
+    st.write("#")
+
+    col3, col4 = st.columns(2)
+    col3.image(image3, caption='Tea Autocorrelation and Partial Autocorrelation plot')
+    col4.image(image4, caption='Tea sales forecast for next 7 days')
+    st.write("#")
+    
+    col5, col6 = st.columns(2)
+    col5.image(image3, caption='Bread Autocorrelation and Partial Autocorrelation plot')
+    col6.image(image4, caption='Bread sales forecast for next 7 days')
+    st.write("#")
